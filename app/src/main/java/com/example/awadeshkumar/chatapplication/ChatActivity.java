@@ -52,11 +52,6 @@ public class ChatActivity extends AppCompatActivity {
     };
 
 
-    @Override
-    protected void onResume() {
-        PushReceiver.isBackground = false;
-        super.onResume();
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +60,7 @@ public class ChatActivity extends AppCompatActivity {
         Intent intent = getIntent();
         username = intent.getStringExtra("user");
         setupUI();
-        receiveMessage();
+    //    receiveMessage();
         registerReceiver(pushReceiver, new IntentFilter("MyAction"));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         SpannableString s = new SpannableString(username);
@@ -166,12 +161,15 @@ public class ChatActivity extends AppCompatActivity {
                 if (e == null) {
                     adapter.clear();
                     for (int i = messages.size() - 1; i >= 0; i--) {
-                        if (messages.get(i).getString(USER_NAME_KEY).equals(ParseUser.getCurrentUser().getUsername())) {
-                            addItemstoListView(messages.get(i).getString(USER_NAME_KEY)
-                                    + ": " + messages.get(i).getString("message"), false);
-                        } else if (messages.get(i).getString(USER_NAME_KEY).equals(username)) {
-                            addItemstoListView(messages.get(i).getString(USER_NAME_KEY)
-                                    + ": " + messages.get(i).getString("message"), true);
+                        //    messages.get(i).deleteInBackground();
+                        if (messages != null && messages.size() > 0) {
+                            if (messages.get(i).getString(USER_NAME_KEY) != null && messages.get(i).getString(USER_NAME_KEY).equals(ParseUser.getCurrentUser().getUsername())) {
+                                addItemstoListView(messages.get(i).getString(USER_NAME_KEY)
+                                        + ": " + messages.get(i).getString("message"), false);
+                            } else if (messages.get(i).getString(USER_NAME_KEY) != null && messages.get(i).getString(USER_NAME_KEY).equals(username)) {
+                                addItemstoListView(messages.get(i).getString(USER_NAME_KEY)
+                                        + ": " + messages.get(i).getString("message"), true);
+                            }
                         }
                     }
                 } else {

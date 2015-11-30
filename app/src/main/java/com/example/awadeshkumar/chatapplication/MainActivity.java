@@ -109,33 +109,7 @@ public class MainActivity extends AppCompatActivity {
                         if (user != null) {
                             SharedPreferenceManager preferenceManager = new SharedPreferenceManager(mContext, "LOGIN_DETAILS");
                             preferenceManager.storeStringPreference("loggedIn", "true");
-                            // If user exist and authenticated, send user to Welcome.class
-                            Picasso.with(mContext).load("https://graph.facebook.com/887740027999593/picture?type=large").into(new Target() {
-                                @Override
-                                public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
-                                    ParseUser currentUser = ParseUser.getCurrentUser();
-                                    if (bitmap != null) {
-                                        ByteArrayOutputStream byteArrayBitmapStream = new ByteArrayOutputStream();
-                                        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayBitmapStream);
-                                        byte[] byteArray = byteArrayBitmapStream.toByteArray();
-                                        ParseFile saveImageFile = new ParseFile("profilePicture.jpg", byteArray);
-                                        currentUser.put("profilePicture", saveImageFile);
-                                    }
-                                    currentUser.saveInBackground();
-                                    Intent intent = new Intent(mContext, UsersListActivity.class);
-                                    startActivity(intent);
-                                }
 
-                                @Override
-                                public void onBitmapFailed(Drawable errorDrawable) {
-
-                                }
-
-                                @Override
-                                public void onPrepareLoad(Drawable placeHolderDrawable) {
-
-                                }
-                            });
                             Toast.makeText(getApplicationContext(),
                                     "Successfully Logged in",
                                     Toast.LENGTH_LONG).show();
@@ -149,13 +123,14 @@ public class MainActivity extends AppCompatActivity {
                                     }
                                 }
                             });
-                            finish();
+                            // If user exist and authenticated, send user to UsersList.class
                             Intent intent = new Intent(mContext, UsersListActivity.class);
                             startActivity(intent);
+                            finish();
                         } else {
                             Toast.makeText(
                                     getApplicationContext(),
-                                    "No such user exist, please signup",
+                                    "No such user exist, please signUp using facebook login",
                                     Toast.LENGTH_LONG).show();
                         }
                     }
@@ -306,10 +281,6 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -385,6 +356,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Login in parse if user already exists
+     *
      * @param userName
      * @param passWord
      */

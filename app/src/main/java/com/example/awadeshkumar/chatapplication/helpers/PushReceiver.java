@@ -21,20 +21,23 @@ import org.json.JSONObject;
  */
 public class PushReceiver extends ParsePushBroadcastReceiver {
 
+    public static boolean isBackground = true;
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        Bundle extras = intent.getExtras();
-        String message = extras != null ? extras.getString("com.parse.Data")
-                : "";
-        JSONObject jObject;
-        try {
-            jObject = new JSONObject(message);
-            Toast toast = Toast.makeText(context, jObject.getString("alert")
-                    + jObject.getString("title"), Toast.LENGTH_SHORT);
-            toast.show();
-        } catch (JSONException e) {
-            e.printStackTrace();
+        if (isBackground) {
+            Bundle extras = intent.getExtras();
+            String message = extras != null ? extras.getString("com.parse.Data")
+                    : "";
+            JSONObject jObject;
+            try {
+                jObject = new JSONObject(message);
+                Toast toast = Toast.makeText(context, jObject.getString("alert")
+                        + jObject.getString("title"), Toast.LENGTH_SHORT);
+                toast.show();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
         }
     }
 

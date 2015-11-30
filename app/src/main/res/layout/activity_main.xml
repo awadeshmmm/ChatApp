@@ -23,7 +23,6 @@
             android:layout_height="46dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:fontFamily="sans-serif-light"
             android:hint="username"
             android:imeOptions="actionNext"
             android:inputType="textEmailAddress"
@@ -62,7 +61,7 @@
             android:layout_marginTop="12dp"
             android:background="#f95537"
             android:hint="Login"
-            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
             android:textSize="22sp" />
     </LinearLayout>
 

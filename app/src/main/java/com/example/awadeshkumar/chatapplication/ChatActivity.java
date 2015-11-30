@@ -32,7 +32,9 @@ import org.json.JSONObject;
 
 import java.util.List;
 
-
+/**
+ * Created by Awadesh
+ */
 public class ChatActivity extends AppCompatActivity {
     public static final String USER_NAME_KEY = "username";
     private ArrayAdapter<String> adapter;

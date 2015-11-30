@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Awadesh Kumar\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.3.0\27cabf3558be23a89f054334dd92512645ad34d9\bolts-android-1.3.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="27cabf3558be23a89f054334dd92512645ad34d9">
+        <dex dex="D:\Parse-Starter-Project-1.11.0\ChatApplication\app\build\intermediates\pre-dexed\debug\bolts-android-1.3.0-5283004c71ff281db52edef2c49aee8bf4ac7ec3.jar" />
+    </item>
+    <item
+        jar="C:\Users\Awadesh Kumar\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="D:\Parse-Starter-Project-1.11.0\ChatApplication\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1-d3857ace7fa085b0919558f6ca1ee44ec19e4c63.jar" />
+    </item>
+    <item
+        jar="C:\Users\Awadesh Kumar\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3.1\ecb6e1f8e4b0e84c4b886c2f14a1500caf309757\gson-2.3.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="D:\Parse-Starter-Project-1.11.0\ChatApplication\app\build\intermediates\pre-dexed\debug\gson-2.3.1-48fd59dafe9f78cdd55e8085df31168154b0b613.jar" />
+    </item>
+    <item
+        jar="C:\Users\Awadesh Kumar\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-applinks\1.3.0\bc535105332645408ef5f1380215cc954b842178\bolts-applinks-1.3.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="bc535105332645408ef5f1380215cc954b842178">
+        <dex dex="D:\Parse-Starter-Project-1.11.0\ChatApplication\app\build\intermediates\pre-dexed\debug\bolts-applinks-1.3.0-f4ab74bb5a350efa62688e108fba969643c0a5ad.jar" />
+    </item>
+    <item
+        jar="D:\Parse-Starter-Project-1.11.0\ChatApplication\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.6.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1c1afa0ab2a8197a5da1b36c4167a9e479cb74d9">
+        <dex dex="D:\Parse-Starter-Project-1.11.0\ChatApplication\app\build\intermediates\pre-dexed\debug\classes-41b93a3c5bfee49089dbf39127e1dc5ef0283315.jar" />
+    </item>
+    <item
+        jar="D:\Parse-Starter-Project-1.11.0\ChatApplication\app\libs\ParseFacebookUtilsV4-1.9.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="99ddf5a6fe76c9eb2a45e249f5e053c722b93c7f">
+        <dex dex="D:\Parse-Starter-Project-1.11.0\ChatApplication\app\build\intermediates\pre-dexed\debug\ParseFacebookUtilsV4-1.9.0-33e613576b1466df6372f90d7188b659fe488da5.jar" />
+    </item>
+    <item
+        jar="D:\Parse-Starter-Project-1.11.0\ChatApplication\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="D:\Parse-Starter-Project-1.11.0\ChatApplication\app\build\intermediates\pre-dexed\debug\classes-1986a28abe4b751533e6fc053b36d2f20806b1a3.jar" />
+    </item>
+    <item
+        jar="C:\Users\Awadesh Kumar\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-applinks\1.3.0\bc535105332645408ef5f1380215cc954b842178\bolts-applinks-1.3.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="bc535105332645408ef5f1380215cc954b842178">
+        <dex dex="D:\Parse-Starter-Project-1.11.0\ChatApplication\app\build\intermediates\pre-dexed\debug\bolts-applinks-1.3.0-f4ab74bb5a350efa62688e108fba969643c0a5ad.jar" />
+    </item>
+    <item
+        jar="C:\Users\Awadesh Kumar\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.0\7ff0e000d1e27e356567f56c92af3b8ab912636f\picasso-2.5.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="7ff0e000d1e27e356567f56c92af3b8ab912636f">
+        <dex dex="D:\Parse-Starter-Project-1.11.0\ChatApplication\app\build\intermediates\pre-dexed\debug\picasso-2.5.0-bc0d64676baa7d35dd358f36199ea68941b017ae.jar" />
+    </item>
+    <item
+        jar="C:\Users\Awadesh Kumar\.gradle\caches\modules-2\files-2.1\com.parse\parse-android\1.11.0\6592129dec2caa8791d322c7e4b6b7a30e8eadae\parse-android-1.11.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6592129dec2caa8791d322c7e4b6b7a30e8eadae">
+        <dex dex="D:\Parse-Starter-Project-1.11.0\ChatApplication\app\build\intermediates\pre-dexed\debug\parse-android-1.11.0-f1cd1663fcf38b2385813efd284bbc20488f3271.jar" />
+    </item>
+    <item
+        jar="C:\Users\Awadesh Kumar\.gradle\caches\modules-2\files-2.1\com.parse\parse-android\1.11.0\6592129dec2caa8791d322c7e4b6b7a30e8eadae\parse-android-1.11.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6592129dec2caa8791d322c7e4b6b7a30e8eadae">
+        <dex dex="D:\Parse-Starter-Project-1.11.0\ChatApplication\app\build\intermediates\pre-dexed\debug\parse-android-1.11.0-f1cd1663fcf38b2385813efd284bbc20488f3271.jar" />
+    </item>
+    <item
+        jar="C:\Users\Awadesh Kumar\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.0\7ff0e000d1e27e356567f56c92af3b8ab912636f\picasso-2.5.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7ff0e000d1e27e356567f56c92af3b8ab912636f">
+        <dex dex="D:\Parse-Starter-Project-1.11.0\ChatApplication\app\build\intermediates\pre-dexed\debug\picasso-2.5.0-bc0d64676baa7d35dd358f36199ea68941b017ae.jar" />
+    </item>
+    <item
+        jar="D:\Parse-Starter-Project-1.11.0\ChatApplication\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.6.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1c1afa0ab2a8197a5da1b36c4167a9e479cb74d9">
+        <dex dex="D:\Parse-Starter-Project-1.11.0\ChatApplication\app\build\intermediates\pre-dexed\debug\classes-41b93a3c5bfee49089dbf39127e1dc5ef0283315.jar" />
+    </item>
+    <item
+        jar="D:\Parse-Starter-Project-1.11.0\ChatApplication\app\libs\ParseFacebookUtilsV4-1.9.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="99ddf5a6fe76c9eb2a45e249f5e053c722b93c7f">
+        <dex dex="D:\Parse-Starter-Project-1.11.0\ChatApplication\app\build\intermediates\pre-dexed\debug\ParseFacebookUtilsV4-1.9.0-33e613576b1466df6372f90d7188b659fe488da5.jar" />
+    </item>
+    <item
+        jar="C:\Users\Awadesh Kumar\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.3.0\8a62fd16fcc1c06f284fc98e6cbded2a5af1dd4c\bolts-tasks-1.3.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8a62fd16fcc1c06f284fc98e6cbded2a5af1dd4c">
+        <dex dex="D:\Parse-Starter-Project-1.11.0\ChatApplication\app\build\intermediates\pre-dexed\debug\bolts-tasks-1.3.0-f5136813c0fb9a711203583fb4e29ba49ee077a3.jar" />
+    </item>
+    <item
+        jar="C:\Users\Awadesh Kumar\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.3.0\8a62fd16fcc1c06f284fc98e6cbded2a5af1dd4c\bolts-tasks-1.3.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8a62fd16fcc1c06f284fc98e6cbded2a5af1dd4c">
+        <dex dex="D:\Parse-Starter-Project-1.11.0\ChatApplication\app\build\intermediates\pre-dexed\debug\bolts-tasks-1.3.0-f5136813c0fb9a711203583fb4e29ba49ee077a3.jar" />
+    </item>
+    <item
+        jar="D:\Parse-Starter-Project-1.11.0\ChatApplication\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="D:\Parse-Starter-Project-1.11.0\ChatApplication\app\build\intermediates\pre-dexed\debug\classes-089c608e0e04af4ee5aa737d840260a5fd9b88c8.jar" />
+    </item>
+    <item
+        jar="D:\Parse-Starter-Project-1.11.0\ChatApplication\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="D:\Parse-Starter-Project-1.11.0\ChatApplication\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-ed84dab060c0ac3731c8222f5c2d35f8339b7ffd.jar" />
+    </item>
+    <item
+        jar="C:\Users\Awadesh Kumar\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.3.0\27cabf3558be23a89f054334dd92512645ad34d9\bolts-android-1.3.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="27cabf3558be23a89f054334dd92512645ad34d9">
+        <dex dex="D:\Parse-Starter-Project-1.11.0\ChatApplication\app\build\intermediates\pre-dexed\debug\bolts-android-1.3.0-5283004c71ff281db52edef2c49aee8bf4ac7ec3.jar" />
+    </item>
+
+</items>

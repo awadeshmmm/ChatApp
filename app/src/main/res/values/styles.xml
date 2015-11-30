@@ -64,7 +64,7 @@
         <item name="android:buttonStyle">@style/RobotoButtonStyle</item>
         <item name="colorControlActivated">@color/blue</item>
         <item name="colorPrimary">@color/blue</item>
-        <item name="colorPrimaryDark">#ff0000</item>
+        <item name="colorPrimaryDark">@color/blue_dark</item>
 
     </style>
 </resources>

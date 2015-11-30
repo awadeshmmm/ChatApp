@@ -24,7 +24,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:text="@string/buttontext" />
+        android:background="#fb8c00"
+        android:text="@string/buttontext"
+        android:textColor="#000" />
 
     <EditText
         android:id="@+id/chat_box"

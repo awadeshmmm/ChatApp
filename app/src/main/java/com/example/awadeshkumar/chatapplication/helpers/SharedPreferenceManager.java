@@ -7,6 +7,7 @@ import com.google.gson.Gson;
 
 /**
  * Created by Awadesh Kumar on 11/29/2015.
+ * To perform one time login in a device and storing data in  SharedPreferences
  */
 public class SharedPreferenceManager {
 

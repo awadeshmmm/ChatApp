@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.text.SpannableString;
 import android.util.Log;
@@ -34,13 +33,12 @@ import java.util.List;
 
 /**
  * Created by Awadesh
+ * To have chat with the selected user
  */
 public class ChatActivity extends AppCompatActivity {
     public static final String USER_NAME_KEY = "username";
     private ArrayAdapter<String> adapter;
     private static String username;
-    private Handler handler = new Handler();
-
     private EditText txtMessage;
     private Button btnSend;
     private ListView chatListView;
@@ -58,17 +56,11 @@ public class ChatActivity extends AppCompatActivity {
         Intent intent = getIntent();
         username = intent.getStringExtra("user");
         setupUI();
-        ParsePush push = new ParsePush();
-//        PushService.
-        //PushService.subscribe(this, "Prueba", ParseChatActivity.class);
-//        PushService.setDefaultPushCallback(this, ParseChatActivity.class);
-
         receiveMessage();
         registerReceiver(pushReceiver, new IntentFilter("MyAction"));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         SpannableString s = new SpannableString(username);
         getSupportActionBar().setTitle(s);
-        //handler.postDelayed(runnable, 1000);
 
     }
 
@@ -87,9 +79,6 @@ public class ChatActivity extends AppCompatActivity {
                 ParseObject message = new ParseObject("Messages");
                 message.put(USER_NAME_KEY, ParseUser.getCurrentUser().getUsername());
                 message.put("message", data);
-//                message.put("receiver", username);
-//                message.put("sender", ParseUser.getCurrentUser().getUsername());
-//                message.put("message", data);
                 message.saveInBackground(new SaveCallback() {
 
                     @Override
@@ -155,19 +144,7 @@ public class ChatActivity extends AppCompatActivity {
         query.findInBackground(new FindCallback<ParseObject>() {
             public void done(List<ParseObject> messages, ParseException e) {
                 if (e == null) {
-//                    adapter.clear();
-//
-//                    StringBuilder builder = new StringBuilder();
-//                    ParseUser user = ParseUser.getCurrentUser();
-//                    for (int i = messages.size() - 1; i >= 0; i--) {
-//                        if ((messages.get(i).getString("sender") != null && messages.get(i).getString("sender").equals(user.getUsername())) || (messages.get(i).getString("receiver") != null && messages.get(i).getString("receiver").equals(user.getUsername()))) {
-//                            builder.append(messages.get(i).getString("sender")
-//                                    + ": " + messages.get(i).getString("message") + "\n");
-//                            addItemstoListView(builder.toString());
-//                        }
-//                    }
                     adapter.clear();
-
                     StringBuilder builder = new StringBuilder();
                     for (int i = messages.size() - 1; i >= 0; i--) {
                         if (messages.get(i).getString(USER_NAME_KEY).equals(username) || messages.get(i).getString(USER_NAME_KEY).equals(ParseUser.getCurrentUser().getUsername())) {
@@ -191,14 +168,5 @@ public class ChatActivity extends AppCompatActivity {
         chatListView.invalidate();
     }
 
-    private Runnable runnable = new Runnable() {
-        @Override
-        public void run() {
-            //refreshMessages();
-            handler.postDelayed(this, 1000);
-        }
-    };
-//    private void refreshMessages() {
-//        receiveMessage();
-//    }
+
 }

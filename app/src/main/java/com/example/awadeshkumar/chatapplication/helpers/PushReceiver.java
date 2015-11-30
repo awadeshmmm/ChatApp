@@ -15,6 +15,10 @@ import org.json.JSONObject;
 /**
  * Created by Awadesh Kumar on 11/24/2015.
  */
+
+/**
+ * BroadCastReceiver to receive push notifications
+ */
 public class PushReceiver extends ParsePushBroadcastReceiver {
 
 

@@ -9,10 +9,7 @@ import android.text.SpannableString;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.awadeshkumar.chatapplication.Adapter.UsersListAdapter;
@@ -24,13 +21,10 @@ import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
 public class UsersListActivity extends AppCompatActivity {
-    private Button btnLogin;
-    private Spinner spinnerUsers;
     Context mContext;
     ListView listView;
     List<ParseUser> mUsersList;
@@ -45,34 +39,15 @@ public class UsersListActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //  configureUserNameInParse(mUsersList.get(position).getUsername());
                 Intent intent = new Intent(mContext, ChatActivity.class);
                 intent.putExtra("user", mUsersList.get(position).getUsername());
                 startActivity(intent);
 
             }
         });
-      //  getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //  getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         SpannableString s = new SpannableString("Select user");
         getSupportActionBar().setTitle(s);
-        //    setupUI();
-    }
-
-    private void setupUI() {
-        spinnerUsers = (Spinner) findViewById(R.id.spinnerUsers);
-        btnLogin = (Button) findViewById(R.id.buttonLogin);
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                String userName = spinnerUsers.getSelectedItem().toString();
-                configureUserNameInParse(userName);
-                Intent intent = new Intent(mContext, ChatActivity.class);
-                intent.putExtra("user", userName);
-                startActivity(intent);
-                openParseChatActivity(userName);
-            }
-        });
     }
 
     private void configureUserNameInParse(final String userName) {
@@ -98,13 +73,6 @@ public class UsersListActivity extends AppCompatActivity {
                     @Override
                     public void done(List<ParseUser> usersList, com.parse.ParseException e) {
                         if (e == null) {
-//                            ArrayList<String> nameUsers = new ArrayList<String>();
-//                            for (int i = 0; i < usersList.size(); i++) {
-//                                nameUsers.add(usersList.get(i).getString(
-//                                        "username"));
-//                                usersList.get(i).getParseFile("profile.jpg");
-//                            }
-//                            mountSpinnerUsers(nameUsers);
                             mUsersList = usersList;
                             UsersListAdapter usersListAdapter = new UsersListAdapter(usersList, mContext);
                             listView.setAdapter(usersListAdapter);
@@ -118,11 +86,6 @@ public class UsersListActivity extends AppCompatActivity {
 
     }
 
-    private void mountSpinnerUsers(ArrayList<String> names) {
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, names);
-        spinnerUsers.setAdapter(adapter);
-    }
 
     private void openParseChatActivity(String name) {
         Intent i = new Intent(this, ChatActivity.class);
@@ -136,19 +99,6 @@ public class UsersListActivity extends AppCompatActivity {
         toast.show();
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.choose_user, menu);
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.menu_users_list, menu);
-//        return true;
-//    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

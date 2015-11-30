@@ -49,6 +49,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Arrays;
 
+/**
+ * Launching activity
+ */
 
 public class MainActivity extends AppCompatActivity {
     Toolbar mToolbar;
@@ -94,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
         }
         SpannableString title = new SpannableString("Chat Application");
         getSupportActionBar().setTitle(title);
+        // To login in Parse for existing users
         userLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -159,6 +163,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        // Handling login using Facebook credentials
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
@@ -192,14 +197,18 @@ public class MainActivity extends AppCompatActivity {
                                     user.setUsername(name);
                                     user.setEmail(email);
                                     ParseGeoPoint point = new ParseGeoPoint(40.0, -30.0);
-                                    user.put("location",point);
+                                    user.put("location", point);
                                     user.setPassword(id);
+                                    //signUp in parse
                                     user.signUpInBackground(new SignUpCallback() {
                                         @Override
                                         public void done(com.parse.ParseException e) {
 
                                             if (e == null) {
-                                                // If user exist and authenticated, send user to Welcome.class
+                                                /**
+                                                 * If users login first time, send user to UsersListActivity.class
+                                                 */
+
                                                 Picasso.with(mContext).load(profile_pic.toString()).into(new Target() {
                                                     @Override
                                                     public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
@@ -244,8 +253,8 @@ public class MainActivity extends AppCompatActivity {
                                                     }
                                                 });
                                             } else if (e.toString().contains("com.parse.ParseRequest$ParseRequestException: username " + name + " already taken")) {
+                                                // If user already exist
                                                 ParseInstallation installation = ParseInstallation.getCurrentInstallation();
-
                                                 if (!installation.containsKey(name)) {
                                                     installation.put("username", name);
                                                     installation.saveInBackground();
@@ -351,10 +360,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     Intent intent = new Intent(mContext, UsersListActivity.class);
                     startActivity(intent);
-                    // Hooray! Let them use the app now.
                 } else {
-                    // Sign up didn't succeed. Look at the ParseException
-                    // to figure out what went wrong
                     ParseUser currentUser = ParseUser.getCurrentUser();
                     try {
                         Bitmap dp = Picasso.with(mContext).load(profilePicUrl.toString()).get();
@@ -377,6 +383,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Login in parse if user already exists
+     * @param userName
+     * @param passWord
+     */
     public void loginInParse(final String userName, String passWord) {
         ParseUser.logInInBackground(userName, passWord, new LogInCallback() {
             @Override

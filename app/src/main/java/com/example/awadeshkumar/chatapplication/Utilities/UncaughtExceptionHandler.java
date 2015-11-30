@@ -2,7 +2,10 @@ package com.example.awadeshkumar.chatapplication.Utilities;
 
 /**
  * Created by Awadesh Kumar on 11/25/2015.
+ * <p/>
+ * To catch all the exceptions
  */
+
 
 import android.content.Context;
 import android.util.Log;
